@@ -1,0 +1,180 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 23px 16px;
+    position: relative;
+    width: 100%;
+    max-width: 366px;
+    min-width: 260px;
+    min-height: 613px;
+    background: $white_color;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    &__night {
+        margin: 0 10px 27px auto;
+    }
+    &__time {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 17px;
+        padding: 0 10px;
+        &-button {
+            background: $white_color1;
+            height: 40px;
+            border-radius: 4px;
+            color: #606060;
+            @include flex-center;
+            &-active {
+                background: $green_color;
+                color: $white_color;
+            }
+        }
+    }
+    &__line_time {
+        margin: 17px auto;
+    }
+    &__save_button {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        height: 40px;
+        background: $orange_color;
+        border-radius: 4px;
+        color: $white_color;
+        text-align: center;
+        padding: 8px 11px;
+        line-height: 150%;
+        font-size: 16px;
+        &-icons {
+            padding-top: 2px;
+        }
+        &-disabled {
+            cursor: default;
+            color: $grey_color;
+        }
+    }
+}
+
+.react-datepicker {
+    border: 0;
+    font-size: 18px;
+    width: 100%;
+    &__header {
+        background-color: inherit;
+        border: 0;
+        padding: 0;
+    }
+    &__header--custom {
+        &-wrap {
+            display: grid;
+            grid-template-columns: 1fr 32px 32px;
+            column-gap: 14px;
+            padding: 0 10px;
+        }
+        &-month {
+            margin-bottom: 27px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            @include flex-center($jc: start);
+        }
+        &-chevron {
+            width: 32px;
+            height: 32px;
+            background: $white_color1;
+            border-radius: 4px;
+        }
+    }
+    &__custom-day {
+        position: relative;
+        &--close {
+            position: absolute;
+            top: -17px;
+            right: -9px;
+            display: none;
+        }
+    }
+    &__month {
+        margin: 0;
+        &-container {
+            width: 100%;
+        }
+    }
+
+    &__week {
+        display: flex;
+        justify-content: space-between;
+        padding: 1px 0;
+    }
+
+    &__day {
+        width: 40px;
+        height: 40px;
+        padding: 8px 0;
+        margin: 0;
+        line-height: 23px;
+        color: $grey_color;
+
+        &:hover {
+            border-radius: 50%;
+        }
+        &-names {
+            text-transform: capitalize;
+            color: $grey_color;
+            margin: 0 0 8px 0;
+            display: flex;
+            justify-content: space-between;
+            & > div {
+                margin: 0;
+                width: 2.5rem;
+            }
+        }
+    }
+    &__day--keyboard-selected {
+        background: inherit;
+    }
+    &__day--selected {
+        background: $orange_color;
+        border-radius: 50%;
+        color: $white_color;
+        &:hover {
+            background: $orange_color;
+            border-radius: 50%;
+            & .react-datepicker__custom-day--close {
+                display: block;
+            }
+        }
+    }
+    &__day--highlighted {
+        border-radius: 50%;
+        color: $white_color;
+        background-color: $green_color !important;
+    }
+}
+
+.card__theme {
+    background: $grey_color1;
+    .react-datepicker {
+        background: $grey_color1;
+        color: $white_color2;
+    }
+    .react-datepicker__day-name {
+        color: $white_color2;
+    }
+    .card__line_time {
+        color: $white_color2;
+    }
+    .react-datepicker__day {
+        color: $white_color3;
+        &:hover {
+            color: $grey_color1;
+        }
+    }
+    .card__save_button-icons {
+        & > svg {
+            & > path {
+                fill: $white_color;
+            }
+        }
+    }
+}

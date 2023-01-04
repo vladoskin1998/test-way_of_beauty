@@ -1,0 +1,35 @@
+.loader {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 20px solid;
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite alternate;
+    opacity: 0.3;
+    &__wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+    }
+}
+@keyframes animloader {
+    0% {
+        border-color: $orange_color rgba(255, 255, 255, 0)
+            rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+    }
+    33% {
+        border-color: $orange_color $orange_color rgba(255, 255, 255, 0)
+            rgba(255, 255, 255, 0);
+    }
+    66% {
+        border-color: $orange_color $orange_color $orange_color
+            rgba(255, 255, 255, 0);
+    }
+    100% {
+        border-color: $orange_color $orange_color $orange_color $orange_color;
+    }
+}

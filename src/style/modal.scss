@@ -1,0 +1,31 @@
+.modal__wrap {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white_opacity;
+    @include flex-center();
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+.modal {
+    opacity: 1 !important;
+    min-height: 350px;
+    min-width: 550px;
+    border: 8px;
+    background-color: $orange_color;
+    @include flex-center();
+}
+
+.modal__day {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 80px;
+    color: $white_color;
+    .card__save_button {
+        width: 200px;
+        background: $grey_color1;
+    }
+}
