@@ -1,8 +1,12 @@
 import axios from "axios";
 
 export const $api2 = axios.create({baseURL: '/api/',});
-<DataViewDataViewDataViewDataViewDataViewDataViewDataViewDataViewDataViewDataViewDataViewDataView>
 
+import axios from "axios";
 
-<DataViewDataViewDataViewDataViewDataViewDataViewDataViewDataViewDataViewDataViewDataViewDataView>
+export const $api2 = axios.create({baseURL: '/api/',});
+
+import axios from "axios";
+
+export const $api2 = axios.create({baseURL: '/api/',});
 
